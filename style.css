@@ -1,0 +1,22 @@
+.root{...}
+
+.body{
+      margin: 0;
+      padding: 0;
+      background-image: url(Home_Image.jpg);
+      background-size: cover;
+      background-position: center
+      background-color: black;
+}
+
+.btn{
+
+background-color: #ba0b0b;
+}
+
+.login{
+       position: absolute;
+       top: 40%;
+       left: 50%;
+
+}

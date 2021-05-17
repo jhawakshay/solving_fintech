@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Tool to get an Application Risk Score</title>
+
+    <body>
+    <img src= "{{ url_for('static', filename ='Home_Image.j') }}">
+        <div class="login">
+            <h1> A Machine Learning Algorithm to predict Risk Score</h1>
+            <h3> Please enter the following value to check your Application Score</h3>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+    	<td> Enter your Age </td>
+        <input type="text" name="AGE" required="required" />
+        <input type="text" name="DEBT RATIO"  required="required" />
+		<input type="text" name="NUMBER OF DEPENDENTS" required="required" />
+        <input type="text" name="UNSECURED LOANS" required="required" />
+        <input type="text" name="MONTHLY INCOME" required="required" />
+        <input type="text" name="NUMBER OF OPEN CREDIT LINES" required="required" />
+        <input type="text" name="NUMBER OF TIMES 30-59 DPD" required="required" />
+        <input type="text" name="REAL ESTATE" required="required" />
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+ </body>
+</head>
+</html>
